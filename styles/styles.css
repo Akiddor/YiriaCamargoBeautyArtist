@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+body {
+    color: #ffff;
+    background-color: #000000;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #eac102;
+}
+
+
+.card-container {
+    max-width: 90%;
+    /* Ajusta el ancho máximo al tamaño de la pantalla */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    /* Asegura que el contenido no se desborde */
+}
+
+
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra la imagen y el texto horizontalmente */
+    text-align: center;
+    padding: 20px;
+    font-family: 'Edu VIC WA NT Beginner', sans-serif;
+}
+
+.profile-name img {
+    max-width: 100%;
+    /* Ajusta la imagen al 100% del contenedor */
+    height: auto;
+    margin-bottom: 20px;
+    /* Espacio entre la imagen y el texto */
+    border-radius: 15px;
+    /* Bordes redondeados */
+}
+
+
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .profile-name img {
+        max-width: 60%;
+        /* Aumenta el tamaño máximo en pantallas medianas */
+    }
+}
+
+@media (min-width: 900px) {
+    .profile-name img {
+        max-width: 50%;
+        /* Ajusta el tamaño máximo en pantallas más grandes */
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-name img {
+        max-width: 40%;
+        /* Tamaño máximo para pantallas grandes */
+    }
+}
+
+
+
+
+/* Titulo Dorado */
+
+.visit-us h2 {
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.treatments {
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.treatments h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+/* Estilo dorado brillante para los botones */
+.treatment-button {
+    width: 100%;
+    background: linear-gradient(135deg, #ddca5a, #d9ab14); /* Gradiente dorado brillante */
+    color: rgba(255, 255, 255, 0.891);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); 
+    font-family: "Open Sans", sans-serif;
+}
+
+.treatment-button:hover {
+    background: linear-gradient(135deg, #FFC300, #FFD700); /* Acentúa el dorado al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.7); /* Sombra dorada más intensa */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.treatment-button:active {
+    transform: translateY(0); /* Restablece la posición al hacer clic */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Mantiene la sombra dorada */
+}
+
+/* Estilo adicional para cualquier nuevo botón de tratamiento */
+.new-treatment-button {
+    width: 100%;
+    background: linear-gradient(135deg, #d4bc33, #736741); /* Gradiente dorado brillante */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Sombra dorada suave */
+}
+
+.new-treatment-button:hover {
+    background: linear-gradient(135deg, #FFC300, #FFD700); /* Acentúa el dorado al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.7); /* Sombra dorada más intensa */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.new-treatment-button:active {
+    transform: translateY(0); /* Restablece la posición al hacer clic */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Mantiene la sombra dorada */
+}
+
+
+
+
+
+
+/* Agregar margen a los nuevos ítems de tratamiento */
+.new-treatment-item {
+    margin: 20px 0;
+}
+
+
+.new-treatment-item {
+    margin: 20px 0;
+}
+
+.new-treatment-content {
+    display: none;
+}
+
+
+
+.details-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*  UBICACION */
+.ubicacion {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ubicacion iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* Estilo para la lista de redes sociales en el pie de página */
+.redes {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+/* Botones de redes sociales */
+.redes .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Color de los íconos de redes sociales */
+.redes .icon i {
+    color: #362727;
+}
+
+/* Tooltip de redes sociales */
+.redes .tooltip {
+    position: absolute;
+    bottom: 60px;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.redes .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #000;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}

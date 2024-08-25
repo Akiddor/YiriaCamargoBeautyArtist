@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiria Camargo Beauty Artist</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/script/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+        rel="stylesheet">
+
+
+
+        <style>
+            /* Animación de caída */
+            @keyframes fall {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+    
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            /* Aplicar la animación al cargar la página */
+            .fall-animation {
+                opacity: 0;
+                animation: fall 1s forwards;
+            }
+        </style>
+
+</head>
+
+<body>
+    <div class="card-container glass-effect">
+
+        <!-- Profile Name -->
+        <div class="profile-name">
+            <img src="img/Profile-remove.png" alt="Biby Ortiz Skin & Body">
+            <div class="info">
+                <p>En Yiria Camargo Beauty Artist, creemos que la belleza natural es un arte que debe ser realzado con
+                    delicadeza y precisión. Nos especializamos en el diseño de cejas y pestañas, ofreciendo una
+                    experiencia única y personalizada en un entorno acogedor. Cada tratamiento es cuidadosamente
+                    diseñado para resaltar y enmarcar tu rostro, destacando tu mejor versión con elegancia y sutileza.
+                </p>
+
+            </div>
+        </div>
+
+
+        <!-- Treatments Section -->
+        <div class="treatments">
+            <h2>Conoce nuestros servicios</h2>
+            
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamientos-reductivos')">
+                    MICROPIGMENTACIÓN
+                    <i class="fas fa-chevron-down"></i> 
+                </button>
+
+            </div>
+
+
+            <!-- Treatment Circuit BO -->
+            <div class="treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('treatment-circuit')">
+                    
+                    <i class="fas fa-chevron-down"></i> <!-- Ícono de flecha hacia abajo -->
+                </button>
+            
+            </div>
+
+            <!-- Facial Rejuvenecedor Intensivo -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('facial-rejuvenecedor')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+            </div>
+
+            <!-- Tratamiento papada -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-papada')">
+                    <i class="fas fa-chevron-down"></i> </button>
+            </div>
+
+            <!-- Tratamiento Anti-Edad -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-anti-edad')">
+                    <i class="fas fa-chevron-down"></i> </button>
+                
+            </div>
+
+            <!-- Facial Limpieza Profunda -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-facial')">
+                    <i class="fas fa-chevron-down"></i> </button>
+        </div>
+        <!-- Social Media Links and Location -->
+        <footer>
+            <!-- Visit Us Section -->
+            <div class="visit-us">
+                <h2>¡Visítanos!</h2>
+            </div>
+            <!-- Location -->
+            <div class="ubicacion">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.9523405775913!2d-106.10896094298174!3d28.652294232886433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea431f41d33a97%3A0x25a3f83757995952!2sA.%20F.%20Carbonel%205112%2C%20Panamericana%2C%2031210%20Chihuahua%2C%20Chih.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2spa!4v1724446184275!5m2!1ses-419!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <ul class="redes">
+                <li class="icon whats">
+                    <a href="http://wa.me/6141311082" target="_blank" rel="noopener noreferrer">
+                        <span class="tooltip">Whatsapp</span>
+                        <span><i class="fab fa-whatsapp"></i></span>
+                    </a>
+                </li>
+
+                <a href="https://www.instagram.com/yiriacamargo_beauty_artist/" target="_blank" class="no-link-style">
+                    <li class="icon instagram">
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </li>
+                </a>
+                <li class="icon facebook">
+                    <a href="https://www.facebook.com/profile.php?id=100065262890354&paipv=0&eav=Afa3ZQFty9Py2YQqP0X2cRVrMqIWMn6nKtLCs_VmfO66dvwBdM93H-8DbPLsks_BG0o"
+                        target="_blank" rel="noopener noreferrer">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </a>
+                </li>
+
+                <li class="icon tiktok">
+                    <span class="tooltip">Tiktok</span>
+                    <span><i class="fab fa-tiktok"></i></span>
+                </li>
+                <li class="icon tel">
+                    <span class="tooltip">Teléfono</span>
+                    <a href="tel:+526141311082" class="phone-link">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
