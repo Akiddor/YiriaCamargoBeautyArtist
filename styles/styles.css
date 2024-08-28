@@ -61,6 +61,9 @@ body {
     color: transparent; /* Hace el texto transparente para mostrar el gradiente */
     background-size: 200%; /* Asegura que el gradiente cubra todo el texto */
     background-position: center; /* Centra el gradiente en el texto */
+    
+    font-family: 'Georgia', serif; /* Fuente en cursiva */
+    font-style: italic; /* Aplica cursiva */
 }
 
 
@@ -108,11 +111,11 @@ body {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
 }
 
 .treatments h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 15px;
     font-family: 'Dancing Script', cursive;
 }
@@ -135,7 +138,7 @@ body {
     );
     -webkit-background-clip: text; /* Usa el gradiente como color de texto */
     background-clip: text; /* Usa el gradiente como color de texto */
-    font-size: 22px;
+    font-size: 20px;
     padding: 15px 0; /* Añade espacio arriba y abajo */
     text-align: center;
     cursor: pointer;
