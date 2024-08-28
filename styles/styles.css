@@ -9,26 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #eac102;
-}
-
-
-.card-container {
-    max-width: 90%;
-    /* Ajusta el ancho máximo al tamaño de la pantalla */
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    overflow: hidden;
-    /* Asegura que el contenido no se desborde */
+    background-image: url('/img/grava.avif');
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija el fondo en su lugar al hacer scroll */
+    background-position: center; /* Centra la imagen de fondo */
 }
 
 
@@ -37,21 +22,49 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centra la imagen y el texto horizontalmente */
     text-align: center;
-    padding: 20px;
-    font-family: 'Edu VIC WA NT Beginner', sans-serif;
+    padding: 10px; /* Reduce el padding para una mayor compresión */
+    margin: 0 auto; /* Elimina el margen superior e inferior para una mayor compresión */
+    gap: 10px; /* Reduce el espacio entre los elementos dentro del contenedor */
 }
 
-.profile-name img {
-    max-width: 100%;
-    /* Ajusta la imagen al 100% del contenedor */
-    height: auto;
+
+.profileimg {
+    width: 40vw; /* La imagen ocupará el 40% del ancho de la ventana */
+    max-width: 250px; /* Tamaño máximo para la imagen */
+    height: auto; /* Mantiene la proporción original de la imagen */
     margin-bottom: 20px;
-    /* Espacio entre la imagen y el texto */
-    border-radius: 15px;
-    /* Bordes redondeados */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra suave para destacar la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave al hacer hover */
 }
+
+
+
+.profile-name .info p {
+    font-size: 17px; /* Ajuste de tamaño de fuente para mejor visibilidad del gradiente */
+    line-height: 1.8; /* Aumenta el espacio entre líneas para una apariencia más aireada */
+    margin: 0;
+    padding: 0;
+    
+    background-image: linear-gradient(
+        to right,
+        #462523 0%,
+        #cb9b51 25%,
+        #f6e27a 50%,
+        #f6f2c0 60%,
+        #f6e27a 70%,
+        #cb9b51 90%,
+        #462523 100%
+    );
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+    color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+    background-size: 200%; /* Asegura que el gradiente cubra todo el texto */
+    background-position: center; /* Centra el gradiente en el texto */
+}
+
+
+
 
 
 
@@ -105,60 +118,41 @@ h6 {
 }
 
 
-/* Estilo dorado brillante para los botones */
 .treatment-button {
-    width: 100%;
-    background: linear-gradient(135deg, #ddca5a, #d9ab14); /* Gradiente dorado brillante */
-    color: rgba(255, 255, 255, 0.891);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 12px;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    background: none; /* Elimina el fondo */
+    border: none; /* Elimina los bordes */
+    color: transparent; /* Oculta el texto inicialmente */
+    background-image: linear-gradient(
+        to right,
+        #462523 0,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+    );
+    -webkit-background-clip: text; /* Usa el gradiente como color de texto */
+    background-clip: text; /* Usa el gradiente como color de texto */
+    font-size: 22px;
+    padding: 15px 0; /* Añade espacio arriba y abajo */
     text-align: center;
-    font-size: 18px;
     cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); 
-    font-family: "Open Sans", sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
 }
 
 .treatment-button:hover {
-    background: linear-gradient(135deg, #FFC300, #FFD700); /* Acentúa el dorado al pasar el cursor */
-    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.7); /* Sombra dorada más intensa */
-    transform: translateY(-2px); /* Efecto de elevación */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
 }
 
-.treatment-button:active {
-    transform: translateY(0); /* Restablece la posición al hacer clic */
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Mantiene la sombra dorada */
-}
 
-/* Estilo adicional para cualquier nuevo botón de tratamiento */
-.new-treatment-button {
-    width: 100%;
-    background: linear-gradient(135deg, #d4bc33, #736741); /* Gradiente dorado brillante */
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    text-align: left;
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Sombra dorada suave */
-}
+  
 
-.new-treatment-button:hover {
-    background: linear-gradient(135deg, #FFC300, #FFD700); /* Acentúa el dorado al pasar el cursor */
-    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.7); /* Sombra dorada más intensa */
-    transform: translateY(-2px); /* Efecto de elevación */
-}
 
-.new-treatment-button:active {
-    transform: translateY(0); /* Restablece la posición al hacer clic */
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Mantiene la sombra dorada */
-}
+
 
 
 
