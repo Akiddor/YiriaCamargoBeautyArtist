@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-image: url('/img/grava.avif');
+    background-image: url('/img/fondo.jpg');
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Fija el fondo en su lugar al hacer scroll */
