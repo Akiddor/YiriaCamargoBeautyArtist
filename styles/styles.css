@@ -16,8 +16,6 @@ body {
     background-position: center; /* Centra la imagen de fondo */
 }
 
-
-
 .profile-name {
     display: flex;
     flex-direction: column;
@@ -28,7 +26,6 @@ body {
     gap: 10px; /* Reduce el espacio entre los elementos dentro del contenedor */
 }
 
-
 .profileimg {
     width: 40vw; /* La imagen ocupará el 40% del ancho de la ventana */
     max-width: 250px; /* Tamaño máximo para la imagen */
@@ -38,8 +35,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra suave para destacar la imagen */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave al hacer hover */
 }
-
-
 
 .profile-name .info p {
     font-size: 17px; /* Ajuste de tamaño de fuente para mejor visibilidad del gradiente */
@@ -66,11 +61,6 @@ body {
     font-style: italic; /* Aplica cursiva */
 }
 
-
-
-
-
-
 /* Media Queries */
 @media (min-width: 600px) {
     .profile-name img {
@@ -93,11 +83,7 @@ body {
     }
 }
 
-
-
-
 /* Titulo Dorado */
-
 .visit-us h2 {
     font-size: 30px;
     font-family: 'Dancing Script', cursive;
@@ -119,7 +105,6 @@ body {
     margin-bottom: 15px;
     font-family: 'Dancing Script', cursive;
 }
-
 
 .treatment-button {
     width: 100%; /* Ocupa todo el ancho del contenedor */
@@ -143,7 +128,6 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-   
 }
 
 .treatment-button:hover {
@@ -151,23 +135,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
 }
 
-
-  
-
-
-
-
-
-
-
-
-
 /* Agregar margen a los nuevos ítems de tratamiento */
-.new-treatment-item {
-    margin: 20px 0;
-}
-
-
 .new-treatment-item {
     margin: 20px 0;
 }
@@ -176,14 +144,13 @@ body {
     display: none;
 }
 
-
-
 .details-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-/*  UBICACION */
+
+/* UBICACION */
 .ubicacion {
     width: 100%;
     max-width: 600px;
@@ -198,7 +165,6 @@ body {
     height: 100%;
     border: 0;
 }
-
 
 /* Estilo para la lista de redes sociales en el pie de página */
 .redes {
