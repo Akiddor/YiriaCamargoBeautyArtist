@@ -16,6 +16,26 @@ body {
     background-position: center; /* Centra la imagen de fondo */
 }
 
+/* Media Queries para ajustar el fondo en diferentes tamaños de pantalla */
+@media (max-width: 600px) {
+    body {
+        background-size: contain; /* Ajusta el tamaño de la imagen para que se contenga dentro del viewport */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    }
+}
+
+@media (min-width: 1201px) {
+    body {
+        background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    }
+}
+
+/* Resto del CSS */
 .profile-name {
     display: flex;
     flex-direction: column;
