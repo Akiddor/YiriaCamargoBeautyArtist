@@ -34,37 +34,94 @@
         <!-- Treatments Section -->
         <div class="treatments">
             <h2>Conoce nuestros servicios</h2>
-            
             <div class="new-treatment-item">
                 <button class="treatment-button" onclick="toggleNewTreatment('tratamientos-reductivos')">
                     MICROPIGMENTACIÓN
                     <i class="fas fa-chevron-down"></i> 
                 </button>
-
-                <div class="micropigmentacion">
-                    
-                </div>
-
-            </div>
-
-
-            <!-- LAMINADO DE CEJAS -->
-            <div class="treatment-item">
-                <button class="treatment-button" onclick="toggleNewTreatment('treatment-circuit')">
-                    LAMINADO DE CEJAS
-                    <i class="fas fa-chevron-down"></i> <!-- Ícono de flecha hacia abajo -->
-                </button>
             
+                <div id="tratamientos-reductivos" class="micropigmentacion" style="display: none;">
+                    <div class="micropigmentacion-item">
+                        <h3>Cejas</h3>
+                        <img src="/img/Micropigmentacion.jpg" alt="Imagen de Cejas" class="circular-img">
+                        <ul>
+                            <li>Primera sesión: $4,800</li>
+                            <li>Segunda sesión: $1,800</li>
+                            <li>Microblanding (Boldbrowns) híbridas: (Microblanding + Efecto polvo)</li>
+                            <li>Efecto polvo</li>
+                        </ul>
+                    </div>
+            
+                    <div class="micropigmentacion-item">
+                        <h3>Labios</h3>
+                        <img src="ruta-de-la-imagen.jpg" alt="Imagen de Labios" class="circular-img">
+                        <ul>
+                            <li>Primera sesión: $3,800</li>
+                            <li>Segunda sesión: $1,800</li>
+                            <li>Baby restauración</li>
+                        </ul>
+                    </div>
+            
+                    <div class="micropigmentacion-item">
+                        <h3>Ojos</h3>
+                        <img src="ruta-de-la-imagen.jpg" alt="Imagen de Ojos" class="circular-img">
+                        <ul>
+                            <li>Primera sesión: $1,800</li>
+                            <li>Segunda sesión: $1,000</li>
+                            <li>Punteo de pestañas</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
 
-            <!-- LIFTHING DE PESTANAS -->
-            <div class="new-treatment-item">
-                <button class="treatment-button" onclick="toggleNewTreatment('facial-rejuvenecedor')">
-                    LIFTHING DE PESTAÑAS
-                    <i class="fas fa-chevron-down"></i>
-                </button>
+<!-- LAMINADO DE CEJAS -->
+<div class="treatment-item">
+    <button class="treatment-button" onclick="toggleNewTreatment('laminado-cejas')">
+        LAMINADO DE CEJAS
+        <i class="fas fa-chevron-down"></i> <!-- Ícono de flecha hacia abajo -->
+    </button>
 
-            </div>
+    <div id="laminado-cejas" class="laminado-cejas" style="display: none;">
+        <div class="laminado-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Laminado de Cejas" class="circular-img">
+            <h3>Diseño de cejas + laminado</h3>
+            <p>$400</p>
+        </div>
+        <div class="laminado-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Laminado de Cejas con Henna" class="circular-img">
+            <h3>Diseño de cejas + laminado + henna</h3>
+            <p>$600</p>
+        </div>
+    </div>
+</div>
+
+
+           <!-- LIFTING DE PESTAÑAS -->
+<div class="new-treatment-item">
+    <button class="treatment-button" onclick="toggleNewTreatment('lifting-pestanas')">
+        LIFTING DE PESTAÑAS
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <div id="lifting-pestanas" class="lifting-pestanas" style="display: none;">
+        <div class="lifting-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Lifting de Pestañas" class="circular-img">
+            <h3>Lifting de pestañas</h3>
+            <p>$550</p>
+        </div>
+        <div class="lifting-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Lifting de Pestañas con Tinte" class="circular-img">
+            <h3>Lifting de pestañas + tinte</h3>
+            <p>$700</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
             <!-- TRATAMIENTOS CAPILARES -->
             <div class="new-treatment-item">
@@ -73,20 +130,83 @@
                     <i class="fas fa-chevron-down"></i> </button>
             </div>
 
-            <!-- EXTENSIONES DE PESTANAS -->
-            <div class="new-treatment-item">
-                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-anti-edad')">
-                    EXTENSIONES DE PESTAÑAS
-                    <i class="fas fa-chevron-down"></i> </button>
-                
-            </div>
 
-            <!-- CARBON PEELING -->
-            <div class="new-treatment-item">
-                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-facial')">
-                    CARBON PEELING
-                    <i class="fas fa-chevron-down"></i> </button>
+
+           <!-- EXTENSIONES DE PESTAÑAS -->
+<div class="new-treatment-item">
+    <button class="treatment-button" onclick="toggleNewTreatment('extensiones-pestanas')">
+        EXTENSIONES DE PESTAÑAS
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <div id="extensiones-pestanas" class="extensiones-pestanas" style="display: none;">
+        <div class="extensiones-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Extensiones Clásica" class="circular-img">
+            <h3>Clásica</h3>
+            <p>$700</p>
         </div>
+        <div class="extensiones-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Extensiones Híbrida" class="circular-img">
+            <h3>Híbrida</h3>
+            <p>$800</p>
+        </div>
+        <div class="extensiones-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Extensiones Volumen" class="circular-img">
+            <h3>Volumen</h3>
+            <p>$900</p>
+        </div>
+        <div class="extensiones-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Extensiones Mega Volumen" class="circular-img">
+            <h3>Mega Volumen</h3>
+            <p>$1,000</p>
+        </div>
+    </div>
+</div>
+
+
+       <!-- CARBON PEELING -->
+<div class="new-treatment-item">
+    <button class="treatment-button" onclick="toggleNewTreatment('carbon-peeling')">
+        CARBON PEELING
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <div id="carbon-peeling" class="carbon-peeling" style="display: none;">
+        <div class="carbon-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Sesión Carbon Peeling" class="circular-img">
+            <h3>Sesión</h3>
+            <p>$900</p>
+        </div>
+        <div class="carbon-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Paquete de tres sesiones Carbon Peeling" class="circular-img">
+            <h3>Paquete de tres sesiones</h3>
+            <p>$2,400</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+     <!-- LASER REMOVAL -->
+<div class="new-treatment-item">
+    <button class="treatment-button" onclick="toggleNewTreatment('laser-removal')">
+       LASER REMOVAL
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <div id="laser-removal" class="laser-removal" style="display: none;">
+        <div class="laser-item">
+            <img src="ruta_de_tu_imagen_aqui" alt="Sesión Laser Removal" class="circular-img">
+            <h3>Sesión</h3>
+            <p>$2,500</p>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
         <!-- Social Media Links and Location -->

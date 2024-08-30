@@ -34,7 +34,7 @@ body {
     height: auto; /* Mantiene la proporción original de la imagen */
     margin-bottom: 20px;
     border-radius: 50%; /* Hace que la imagen sea circular */
-    border: 5px solid #a48e21; /* Agrega un borde blanco */
+    border: 5px solid #cab23a; /* Agrega un borde blanco */
     box-shadow: 0 0 50px 15px #e3dada, 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra blanca y una sombra suave */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave al hacer hover */
 }
@@ -64,35 +64,139 @@ body {
     font-style: italic; /* Aplica cursiva */
 }
 
-/* Media Queries */
-@media (min-width: 600px) {
-    .profile-name img {
-        max-width: 60%;
-        /* Aumenta el tamaño máximo en pantallas medianas */
-    }
+
+
+/*Micropigmentacion*/
+/* Micropigmentación */
+.circular-img {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: 80px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+    margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (min-width: 900px) {
-    .profile-name img {
-        max-width: 50%;
-        /* Ajusta el tamaño máximo en pantallas más grandes */
-    }
-}
-
-@media (min-width: 992px) {
-    .profile-name img {
-        max-width: 40%;
-        /* Tamaño máximo para pantallas grandes */
-    }
-}
-
-/* Titulo Dorado */
-.visit-us h2 {
-    font-size: 30px;
-    font-family: 'Dancing Script', cursive;
-    color: rgb(255, 255, 255);
+.micropigmentacion-item {
     margin-bottom: 20px;
+    text-align: center;
 }
+
+.micropigmentacion h3 {
+    color: #cab23a; /* Cambiado a dorado */
+    margin-top: 15px;
+}
+
+.micropigmentacion ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.micropigmentacion li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #cab23a; /* Texto en dorado */
+}
+
+
+
+/* Laminado de Cejas */
+.laminado-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.laminado-cejas h3 {
+    color: #cab23a; /* Color dorado */
+    margin-top: 15px;
+}
+
+.laminado-cejas p {
+    color: #cab23a; /* Color dorado */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+
+/* Lifting de Pestañas */
+.lifting-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lifting-pestanas h3 {
+    color: #cab23a; /* Color dorado */
+    margin-top: 15px;
+}
+
+.lifting-pestanas p {
+    color: #cab23a; /* Color dorado */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+/* Extensiones de Pestañas */
+.extensiones-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.extensiones-pestanas h3 {
+    color: #cab23a; /* Color dorado */
+    margin-top: 15px;
+}
+
+.extensiones-pestanas p {
+    color: #cab23a; /* Color dorado */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+/* Carbon Peeling */
+.carbon-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.carbon-peeling h3 {
+    color: #cab23a; /* Color dorado */
+    margin-top: 15px;
+}
+
+.carbon-peeling p {
+    color: #cab23a; /* Color dorado */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+
+/* Laser Removal */
+.laser-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.laser-removal h3 {
+    color: #cab23a; /* Color dorado */
+    margin-top: 15px;
+}
+
+.laser-removal p {
+    color: #cab23a; /* Color dorado */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
 
 .treatments {
     margin: 20px auto;
