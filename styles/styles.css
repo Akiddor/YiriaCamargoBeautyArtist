@@ -120,6 +120,10 @@ body {
     color: #cab23a; /* Color dorado */
     font-size: 18px;
     margin-top: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 
@@ -139,6 +143,10 @@ body {
     color: #cab23a; /* Color dorado */
     font-size: 18px;
     margin-top: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 
@@ -157,6 +165,10 @@ body {
     color: #cab23a; /* Color dorado */
     font-size: 18px;
     margin-top: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 
@@ -175,6 +187,10 @@ body {
     color: #cab23a; /* Color dorado */
     font-size: 18px;
     margin-top: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 
@@ -194,6 +210,37 @@ body {
     color: #cab23a; /* Color dorado */
     font-size: 18px;
     margin-top: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+/* Tratamientos Capilares */
+.capilares-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tratamientos-capilares h3 {
+    color: #cab23a; /* Color dorado */
+    margin-top: 15px;
+}
+
+.tratamientos-capilares p {
+    color: #cab23a; /* Color dorado */
+    font-size: 16px;
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.tratamientos-capilares em {
+    font-style: italic;
+    color: #cab23a; /* Texto dorado para los comentarios en cursiva */
 }
 
 
