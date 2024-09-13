@@ -64,6 +64,45 @@ body {
     font-style: italic; /* Aplica cursiva */
 }
 
+/* Payment Methods Section */
+.payment-methods {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-methods h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.payment-methods p {
+    font-size: 1em;
+    color: #8e8a8a;
+    margin-bottom: 20px;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.payment-icon {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
 /*Micropigmentacion*/
