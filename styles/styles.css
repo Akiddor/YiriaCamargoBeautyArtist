@@ -69,8 +69,8 @@ body {
 /*Micropigmentacion*/
 /* Micropigmentación */
 .circular-img {
-    width: 80px; /* Ajusta el tamaño de la imagen */
-    height: 80px;
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px;
     border-radius: 50%; /* Hace que la imagen sea circular */
     object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
     margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
@@ -238,10 +238,32 @@ body {
     border-radius: 5px;
 }
 
-.tratamientos-capilares em {
+/* Comentarios estilo promociones */
+.Comentario {
     font-style: italic;
-    color: #cab23a; /* Texto dorado para los comentarios en cursiva */
+    color: #cab23a; /* Texto dorado */
+    background-color: rgba(255, 215, 0, 0.2); /* Fondo más claro */
+    border: 2px solid #cab23a; /* Borde dorado */
+    padding: 8px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacarlo */
+    position: relative;
 }
+
+/* Añadir un pequeño ícono al lado del comentario */
+.Comentario::before {
+    color: #cab23a;
+    font-size: 20px;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 
 
 
