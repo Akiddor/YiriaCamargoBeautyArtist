@@ -69,8 +69,8 @@ body {
 /*Micropigmentacion*/
 /* Micropigmentación */
 .circular-img {
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: 100px;
+    width: 120px; /* Ajusta el tamaño de la imagen */
+    height: 120px;
     border-radius: 50%; /* Hace que la imagen sea circular */
     object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
     margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
