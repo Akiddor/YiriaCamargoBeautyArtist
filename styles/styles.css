@@ -80,9 +80,10 @@ body {
 
 .payment-methods p {
     font-size: 1em;
-    color: #8e8a8a;
+    color: #131212;
     margin-bottom: 20px;
 }
+
 
 .payment-icons {
     display: flex;
