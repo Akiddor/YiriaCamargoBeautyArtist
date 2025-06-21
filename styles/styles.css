@@ -15,6 +15,9 @@ body {
     background-position: center; /* Centra la imagen de fondo */
 }
 
+.visit-us h2 {
+  text-align: center;
+}
 
 
 /* Resto del CSS */
