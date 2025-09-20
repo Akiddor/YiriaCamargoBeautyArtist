@@ -1,432 +1,572 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-gold: #cab23a;
+    --secondary-gold: #f6e27a;
+    --dark-gold: #8b7914;
+    --light-gold: #f6f2c0;
+    --accent-gold: #cb9b51;
+    --dark-brown: #462523;
+    --white: #ffffff;
+    --black: #000000;
+    --deep-black: #000000;
+    --glass-bg: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-light: rgba(255, 255, 255, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    color: #ffff;
-    background-color: #000000;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 2px;
+    color: var(--white);
+    background: var(--black);
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     margin: 0;
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Fija el fondo en su lugar al hacer scroll */
-    background-position: center; /* Centra la imagen de fondo */
+    padding: 20px;
+    background-attachment: fixed;
 }
 
-.visit-us h2 {
-  text-align: center;
+.card-container {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 
+        0 20px 40px var(--shadow-dark),
+        inset 0 1px 0 var(--shadow-light);
+    animation: fadeInUp 0.8s ease-out;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-/* Resto del CSS */
+/* Profile Section */
 .profile-name {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px; /* Reduce el padding para una mayor compresión */
-    margin: 0 auto; /* Elimina el margen superior e inferior para una mayor compresión */
-    gap: 10px; /* Reduce el espacio entre los elementos dentro del contenedor */
+    padding: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
 }
 
 .profileimg {
-    width: 40vw; /* La imagen ocupará el 40% del ancho de la ventana */
-    max-width: 250px; /* Tamaño máximo para la imagen */
-    height: auto; /* Mantiene la proporción original de la imagen */
-    margin-bottom: 20px;
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    border: 5px solid #cab23a; /* Agrega un borde blanco */
-    box-shadow: 0 0 50px 15px #e3dada, 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra blanca y una sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave al hacer hover */
+    width: min(300px, 40vw);
+    height: min(300px, 40vw);
+    border-radius: 50%;
+    border: 4px solid var(--primary-gold);
+    box-shadow: 
+        0 0 30px rgba(202, 178, 58, 0.4),
+        0 10px 30px var(--shadow-dark);
+    transition: all 0.4s ease;
+    object-fit: cover;
+}
+
+.profileimg:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 50px rgba(202, 178, 58, 0.6),
+        0 15px 40px var(--shadow-dark);
 }
 
 .profile-name .info p {
-    font-size: 17px; /* Ajuste de tamaño de fuente para mejor visibilidad del gradiente */
-    line-height: 1.8; /* Aumenta el espacio entre líneas para una apariencia más aireada */
+    font-size: 18px;
+    line-height: 1.8;
     margin: 0;
-    padding: 0;
-    
-    background-image: linear-gradient(
-        to right,
-        #462523 0%,
-        #cb9b51 25%,
-        #f6e27a 50%,
-        #f6f2c0 60%,
-        #f6e27a 70%,
-        #cb9b51 90%,
-        #462523 100%
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        var(--dark-brown) 0%,
+        var(--accent-gold) 25%,
+        var(--secondary-gold) 50%,
+        var(--light-gold) 60%,
+        var(--secondary-gold) 70%,
+        var(--accent-gold) 90%,
+        var(--dark-brown) 100%
     );
-    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
-    color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-    background-size: 200%; /* Asegura que el gradiente cubra todo el texto */
-    background-position: center; /* Centra el gradiente en el texto */
-    
-    font-family: 'Georgia', serif; /* Fuente en cursiva */
-    font-style: italic; /* Aplica cursiva */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
-/* Payment Methods Section */
+/* Treatments Section */
+.treatments {
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px var(--shadow-dark);
+}
+
+.treatments h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Treatment Buttons */
+.treatment-button {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.treatment-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.treatment-button:hover::before {
+    left: 100%;
+}
+
+.treatment-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px var(--shadow-dark);
+    border-color: var(--primary-gold);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.treatment-icon {
+    color: var(--primary-gold);
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.arrow-icon {
+    color: var(--primary-gold);
+    transition: transform 0.3s ease;
+}
+
+.treatment-button:hover .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.treatment-button {
+    background-image: linear-gradient(
+        135deg,
+        var(--dark-brown) 0%,
+        var(--accent-gold) 25%,
+        var(--secondary-gold) 45%,
+        var(--light-gold) 50%,
+        var(--secondary-gold) 55%,
+        var(--accent-gold) 75%,
+        var(--dark-brown) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Treatment Content */
+.treatment-content {
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    margin-top: 15px;
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Service Items */
+.service-item, .micropigmentacion-item {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover, .micropigmentacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-dark);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Images */
+.circular-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid var(--primary-gold);
+    box-shadow: 0 10px 25px var(--shadow-dark);
+    transition: all 0.3s ease;
+}
+
+.circular-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px var(--shadow-dark);
+}
+
+/* Headings */
+h3 {
+    color: var(--primary-gold);
+    margin: 20px 0 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Price Tags */
+.price-tag {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 8px 5px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--accent-gold));
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(202, 178, 58, 0.3);
+    transition: all 0.3s ease;
+}
+
+.price-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(202, 178, 58, 0.4);
+}
+
+.price-tag.secondary {
+    background: linear-gradient(135deg, var(--accent-gold), var(--dark-gold));
+}
+
+.price-tag.featured {
+    background: linear-gradient(135deg, var(--secondary-gold), var(--primary-gold));
+    transform: scale(1.05);
+}
+
+.price-tag.premium {
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    border: 2px solid var(--light-gold);
+    transform: scale(1.1);
+}
+
+/* Feature Badges */
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.feature-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(202, 178, 58, 0.2);
+    border: 1px solid var(--primary-gold);
+    border-radius: 20px;
+    color: var(--primary-gold);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.feature-badge:hover {
+    background: var(--primary-gold);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.feature-badge.premium {
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    color: var(--white);
+    border: none;
+}
+
+/* Service Benefits */
+.service-benefits {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.benefit {
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: var(--light-gold);
+    font-size: 14px;
+    border-left: 3px solid var(--primary-gold);
+}
+
+.benefit.special {
+    background: rgba(202, 178, 58, 0.1);
+    border-left-color: var(--secondary-gold);
+    font-style: italic;
+}
+
+.service-description p {
+    margin: 10px 0;
+    color: var(--light-gold);
+    font-size: 16px;
+}
+
+.service-subtitle {
+    color: var(--accent-gold);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Payment Methods */
 .payment-methods {
     text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px var(--shadow-dark);
 }
 
 .payment-methods h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--primary-gold);
+    font-family: 'Playfair Display', serif;
 }
 
 .payment-methods p {
-    font-size: 1em;
-    color: #8e8a8a;
-    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--light-gold);
+    margin-bottom: 25px;
 }
 
 .payment-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .payment-icon {
     width: 80px;
     height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    filter: brightness(1.2);
 }
 
 .payment-icon:hover {
     transform: scale(1.1);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.4);
 }
 
-
-
-
-/*Micropigmentacion*/
-/* Micropigmentación */
-.circular-img {
-    width: 120px; /* Ajusta el tamaño de la imagen */
-    height: 120px;
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
-    margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.micropigmentacion-item {
-    margin-bottom: 20px;
+/* Footer */
+footer {
+    margin-top: 50px;
     text-align: center;
 }
 
-.micropigmentacion h3 {
-    color: #cab23a; /* Cambiado a dorado */
-    margin-top: 15px;
-}
-
-.micropigmentacion ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-.micropigmentacion li {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    color: #cab23a; /* Texto en dorado */
-}
-
-
-
-/* Laminado de Cejas */
-.laminado-item {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.laminado-cejas h3 {
-    color: #cab23a; /* Color dorado */
-    margin-top: 15px;
-}
-
-.laminado-cejas p {
-    color: #cab23a; /* Color dorado */
-    font-size: 18px;
-    margin-top: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-
-
-/* Lifting de Pestañas */
-.lifting-item {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.lifting-pestanas h3 {
-    color: #cab23a; /* Color dorado */
-    margin-top: 15px;
-}
-
-.lifting-pestanas p {
-    color: #cab23a; /* Color dorado */
-    font-size: 18px;
-    margin-top: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-
-/* Extensiones de Pestañas */
-.extensiones-item {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.extensiones-pestanas h3 {
-    color: #cab23a; /* Color dorado */
-    margin-top: 15px;
-}
-
-.extensiones-pestanas p {
-    color: #cab23a; /* Color dorado */
-    font-size: 18px;
-    margin-top: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-
-/* Carbon Peeling */
-.carbon-item {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.carbon-peeling h3 {
-    color: #cab23a; /* Color dorado */
-    margin-top: 15px;
-}
-
-.carbon-peeling p {
-    color: #cab23a; /* Color dorado */
-    font-size: 18px;
-    margin-top: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-
-
-/* Laser Removal */
-.laser-item {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.laser-removal h3 {
-    color: #cab23a; /* Color dorado */
-    margin-top: 15px;
-}
-
-.laser-removal p {
-    color: #cab23a; /* Color dorado */
-    font-size: 18px;
-    margin-top: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-
-/* Tratamientos Capilares */
-.capilares-item {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.tratamientos-capilares h3 {
-    color: #cab23a; /* Color dorado */
-    margin-top: 15px;
-}
-
-.tratamientos-capilares p {
-    color: #cab23a; /* Color dorado */
-    font-size: 16px;
-    margin-top: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-/* Comentarios estilo promociones */
-.Comentario {
-    font-style: italic;
-    color: #cab23a; /* Texto dorado */
-    background-color: rgba(255, 215, 0, 0.2); /* Fondo más claro */
-    border: 2px solid #cab23a; /* Borde dorado */
-    padding: 8px;
-    display: block;
-    margin-top: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacarlo */
-    position: relative;
-}
-
-/* Añadir un pequeño ícono al lado del comentario */
-.Comentario::before {
-    color: #cab23a;
-    font-size: 20px;
-    position: absolute;
-    left: -25px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-
-
-
-
-.treatments {
-    margin: 20px auto;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.treatments h2 {
-    font-size: 30px;
+.visit-us h2 {
+    font-size: 32px;
     margin-bottom: 15px;
-    font-family: 'Dancing Script', cursive;
+    color: var(--primary-gold);
+    font-family: 'Playfair Display', serif;
 }
 
-.treatment-button {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    background: none; /* Elimina el fondo */
-    border: none; /* Elimina los bordes */
-    color: transparent; /* Oculta el texto inicialmente */
-    background-image: linear-gradient(
-        to right,
-        #462523 0,
-        #cb9b51 22%,
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 78%,
-        #462523 100%
-    );
-    -webkit-background-clip: text; /* Usa el gradiente como color de texto */
-    background-clip: text; /* Usa el gradiente como color de texto */
-    font-size: 20px;
-    padding: 15px 0; /* Añade espacio arriba y abajo */
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.address {
+    color: var(--light-gold);
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
-.treatment-button:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
-}
-
-/* Agregar margen a los nuevos ítems de tratamiento */
-.new-treatment-item {
-    margin: 20px 0;
-}
-
-.new-treatment-content {
-    display: none;
-}
-
-.details-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* UBICACION */
+/* Location Map */
 .ubicacion {
     width: 100%;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 30px auto;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 35px var(--shadow-dark);
+    border: 3px solid var(--primary-gold);
 }
 
 .ubicacion iframe {
     width: 100%;
-    height: 100%;
+    height: 400px;
     border: 0;
 }
 
-/* Estilo para la lista de redes sociales en el pie de página */
+/* Social Media */
 .redes {
     display: flex;
     list-style: none;
     padding: 0;
     justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
+    gap: 20px;
+    margin-top: 40px;
 }
 
-/* Botones de redes sociales */
 .redes .icon {
     position: relative;
-    background: #fff;
+    background: linear-gradient(135deg, var(--white), #f0f0f0);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px var(--shadow-dark);
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: 2px solid transparent;
 }
 
-/* Color de los íconos de redes sociales */
+.redes .icon:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 20px 40px var(--shadow-dark);
+    border-color: var(--primary-gold);
+}
+
 .redes .icon i {
-    color: #362727;
+    color: var(--dark-brown);
+    transition: all 0.3s ease;
 }
 
-/* Tooltip de redes sociales */
+.redes .icon:hover i {
+    color: var(--primary-gold);
+}
+
+/* Specific social media colors on hover */
+.redes .whats:hover {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.redes .whats:hover i {
+    color: var(--white);
+}
+
+.redes .instagram:hover {
+    background: linear-gradient(135deg, #E4405F, #C13584);
+}
+
+.redes .instagram:hover i {
+    color: var(--white);
+}
+
+.redes .facebook:hover {
+    background: linear-gradient(135deg, #1877F2, #42A5F5);
+}
+
+.redes .facebook:hover i {
+    color: var(--white);
+}
+
+.redes .tiktok:hover {
+    background: linear-gradient(135deg, #000000, #FF0050);
+}
+
+.redes .tiktok:hover i {
+    color: var(--white);
+}
+
+.redes .tel:hover {
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+}
+
+.redes .tel:hover i {
+    color: var(--white);
+}
+
+/* Tooltips */
 .redes .tooltip {
     position: absolute;
-    bottom: 60px;
+    bottom: 80px;
     font-size: 14px;
-    background: #000;
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 5px;
+    background: var(--black);
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: 8px;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    white-space: nowrap;
+    font-weight: 500;
 }
 
 .redes .tooltip::before {
@@ -434,8 +574,89 @@ body {
     content: "";
     height: 8px;
     width: 8px;
-    background: #000;
-    bottom: -3px;
+    background: var(--black);
+    bottom: -4px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
+}
+
+.redes .icon:hover .tooltip {
+    opacity: 1;
+    bottom: 90px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .profileimg {
+        width: min(250px, 50vw);
+        height: min(250px, 50vw);
+    }
+    
+    .profile-name .info p {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .treatments h2 {
+        font-size: 28px;
+    }
+    
+    .treatment-button {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .circular-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .redes {
+        gap: 15px;
+    }
+    
+    .redes .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .ubicacion iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        padding: 15px;
+    }
+    
+    .profile-name .info p {
+        font-size: 14px;
+    }
+    
+    .treatment-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+    
+    .service-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .payment-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
