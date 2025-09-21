@@ -1,3 +1,22 @@
+/* Imagen LAMÍ BROWS rectangular y responsiva */
+#lamibrows-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 3px solid var(--primary-gold);
+    box-shadow: 0 10px 25px var(--shadow-dark);
+    background: var(--black);
+    transition: all 0.3s ease;
+}
+
+#lamibrows-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px var(--shadow-dark);
+}
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
